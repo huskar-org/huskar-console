@@ -1,0 +1,56 @@
+.config
+  &__top
+    flex: 1
+    display: flex
+    overflow: auto
+    flex-direction: column
+
+  &__tags
+    margin-left: 1em
+    margin-top: 0.3em
+
+  &__filter
+    margin: 1em
+    > div
+      display: inline-block
+    input
+      margin-right: 0.3em
+
+  &__buttons
+    float: right
+    button
+      margin-left: 0.3em
+    button:first
+      margin-left: 0
+
+  &__content
+    flex: 1
+    margin: 1em
+    margin-top: 0
+    overflow: auto
+    thead td, td:last-child
+      white-space: nowrap
+    td
+      word-break: break-all
+      &:last-child
+        white-space: nowrap
+
+  &__item
+    &-key
+      width: 18em
+    &-comment
+      color: #999
+    &-actions
+      button
+        margin-left: 0.3em
+      button:first
+        margin-left: 0
+    &-value
+      &-encrypted
+        padding: 0.25em 0.5em;
+        border-radius: 0.25em;
+        border: 1px solid #BC8D36;
+        border-right: 0;
+        color: white;
+        background: #BC8D36;
+

@@ -1,0 +1,108 @@
+.infra-config-editor
+  padding: 1em
+  max-height: 35em
+  overflow-y: scroll
+
+  &__title
+    text-align: center
+    font-style: italic
+    margin: 1em 0
+
+  &__field
+    display: block
+    margin: 0.5em 1em
+    line-height: 2.5em
+
+    .textfield
+      display: block
+
+  &__label
+    display: inline-block
+    width: 10em
+    margin-right: 1em
+    font-weight: bold
+
+  &__pseudo-code
+    margin: 0 1em 1em 1em
+    width: 31em
+    overflow-x: auto
+
+  &__toggle-raw-url
+    margin: 0 1em 1em 1em
+    text-align: right
+    a
+      text-decoration: underline
+      color: #f00
+
+  &__input-wrapper
+    display: inline-block
+    width: 20em
+    // Patch default style of react-select
+    .Select
+      line-height: normal
+    $select-item-gutter: 2px
+    $select-input-font-size: 11px
+    $select-input-height: 24px
+    $select-input-internal-height: 22px
+    @import "~react-select/scss/default"
+
+  &__input
+    display: inline-block
+    width: 100%
+
+  &__button-group
+    display: block
+    margin: 1.5em 0 0.5em 0
+    text-align: center
+
+  &__button
+    margin: 0 0.25em
+
+  &__comment
+    width: 31em
+    background-color: #272822
+    color: #f8f8f2
+    border-radius: 0.3em
+
+    &-body
+      padding: 0.3em 0.5em
+      white-space: nowrap
+      line-height: 1.3em
+      overflow-x: scroll
+
+    &-item
+      margin: 0.8em 0
+
+.infra-config-options-editor
+  width: 35em
+
+  &__group
+    margin: 1em auto
+
+    .textfield
+      width: 100%
+
+  &__detail
+    margin: 0 1em
+
+    a
+      text-decoration: underline
+      &:hover
+        text-decoration: none
+
+  .infra-config-editor
+    &__field
+      display: flex
+      margin: 0 1em
+
+    &__label
+      width: 12em
+
+    &__note
+      margin: auto 1em
+
+      &--help
+        color: grey
+
+      &--warning
+        color: #ff4040

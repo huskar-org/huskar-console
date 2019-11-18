@@ -1,0 +1,20 @@
+.service-cluster-cell
+  display: block
+  line-height: 2em
+
+  &__indicator
+    .octicon
+      margin-left: 0.25em
+      margin-right: 0.25em
+    opacity: 0.5
+    &--multiplex
+      opacity: 1
+      color: #1C6BD0
+
+  &__button
+    margin-left: 0.5em
+    visibility: hidden
+    cursor: pointer
+
+  &:hover &__button
+    visibility: visible

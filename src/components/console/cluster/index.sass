@@ -1,0 +1,143 @@
+@import '../../fa'
+@import '../../button.sass'
+
+.cluster-editor
+  flex: 1
+  display: flex
+  overflow: auto
+  flex-direction: column
+
+  &-topbar
+    font-size: 12px
+    margin: 1em 1.5em
+
+    &__title
+      font-size: 12px
+      font-weight: normal
+      line-height: 2em
+      margin: 0 1em 0 0
+      padding: 0
+      float: left
+
+    &__title-clusterlink
+      opacity: 0.5
+      .octicon
+        margin-left: 0.25em
+        margin-right: 0.25em
+      &--multiplex
+        .octicon
+          color: #1C6BD0
+
+    &__btn
+      margin-left: 0.3em
+
+    &__btnspin
+      margin-right: 0.5em
+      @include fa-icon(refresh, [spin])
+
+    &__btnicon
+      .octicon
+        margin: 0 0.25em
+
+    &__annotation
+      font-size: 12px
+      float: left
+      line-height: 2em
+
+    &__annotation-cross-zone
+      border: 1px solid #C92736
+      border-radius: 0.25em
+      padding: 0.25em 0.5em
+      color: #C92736
+      cursor: pointer
+
+    &__action
+      float: right
+
+  &-notice
+    margin-bottom: 1em
+    padding: 0.5em
+    background: #FEFBEE
+    &__text
+      font-size: 12px
+      line-height: 1.5em
+      color: #DA9560
+      margin: 0
+    &__code
+      display: block
+      font-family: monospace
+      user-select: all
+      &::before
+        content: "$"
+        margin-right: 0.5em
+        color: #A74846
+      a
+        text-decoration: underline
+    &__comment
+      font-weight: bold
+      color: #585858
+      user-select: none
+      &::before
+        content: "echo"
+        margin-right: 0.5em
+      &__red
+        color: red
+
+  &-content
+    flex: 1
+    margin: 1em
+    margin-top: 0
+    overflow: auto
+
+    &__row
+      &--loading td, &--error td
+        text-align: center !important
+        height: 5em
+      &--loading
+        @include fa-icon(refresh, [spin])
+      &--deactivated
+        color: #999
+      &--creating, &--editing
+        background: #FEFEE1
+        &:hover
+          background: #FBFBB8 !important
+
+    &__sep
+      margin-left: 0.5em + 0.3em
+      padding-left: 0.5em
+      border-left: 2px solid #e1e6eb
+
+    &__btn
+      margin-left: 0.3em
+      &--danger
+        background: #FF5154
+
+    &__btnlink
+      display: inline-block
+      @include button()
+
+    &__option, &__input
+      width: 15em
+
+    &__input-wrapper
+      display: block
+      height: 2.5em
+      width: 30em
+      line-height: 2.5em
+
+    &__input-label
+      display: inline-block
+      width: 10em
+
+    &__input-value
+      width: 15em
+      display: inline-block
+
+    &__input-icon
+      margin-left: 1em
+      &--loading
+        @include fa-icon(circle-o-notch, [spin])
+
+    &__import-selector
+      background-color: white
+      width: max-content

@@ -1,0 +1,25 @@
+@import '../../fa'
+
+.infra-connective-result
+
+  .table__table td
+    text-align: left
+
+  &__checking-icon
+    @include fa-icon(spinner, [spin, 3x, fw])
+
+  &__result
+    &--success
+      color: #5bbd72
+
+    &--failed
+      color: red
+
+    span
+      padding-left: 5px
+
+  &__actions
+    text-align: center
+
+    button
+      margin-bottom: 1em

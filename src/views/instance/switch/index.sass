@@ -1,0 +1,56 @@
+.switch
+  &__top
+    flex: 1
+    display: flex
+    overflow: auto
+    flex-direction: column
+
+  &__filter
+    margin: 1em
+    > div
+      display: inline-block
+
+  &__tags
+    margin-left: 1em
+    margin-top: 0.3em
+
+  &__buttons
+    float: right
+    button
+      margin-left: 0.3em
+    button:first
+      margin-left: 0
+
+  &__content
+    flex: 1
+    margin: 1em
+    margin-top: 0
+    overflow: auto
+    thead td, td:last-child
+      white-space: nowrap
+    td
+      word-break: break-all
+    progress  // stolen from Chrome/Safari
+      appearance: progress-bar
+      box-sizing: border-box
+      display: inline-block
+      height: 1em
+      width: 10em
+      vertical-align: -0.2em
+
+  &__item
+    &-key
+      width: 18em
+    &-comment
+      color: #999
+    &-value--progress
+      width: 15em
+      span
+        display: inline-block
+        width: 4em
+        padding-left: 0.2em
+    &-actions
+      button
+        margin-left: 0.3em
+      button:first
+        margin-left: 0

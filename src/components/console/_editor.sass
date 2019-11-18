@@ -1,0 +1,54 @@
+@mixin editor-table-scroll()
+  display: block
+  max-height: 20em
+  overflow-y: auto
+  border-top: 1px dashed #ccc
+  border-bottom: 1px dashed #ccc
+  padding: 0.5em 0
+  margin: 0.5em 0
+
+@mixin editor-table-warning($width: 26em)
+  width: $width
+  background: #C9E1FE
+  border: 1px solid #1269D3
+  border-radius: 0.25em
+  padding: 0 0.5em
+  p
+    margin: 0.5em 0
+  a
+    color: #1269D3
+
+@mixin editor-table-label($width: 4em)
+  width: $width
+  text-align: right
+  padding: 0.5em 1em 0.5em 0.5em
+
+@mixin editor-table-field($width: 22em)
+  width: $width
+  max-width: $width
+  padding: 0.5em
+
+@mixin editor-table-field-line()
+  padding: 0.5em 0
+
+@mixin editor-table-field-line-error()
+  color: red
+  margin-left: 0.5em
+
+@mixin editor-table-btn-group($width: 22em)
+  width: $width
+  max-width: $width
+  text-align: right
+  margin: 0.5em 0
+  button
+    margin-left: 0.25em
+
+@mixin horizontal-line($backgroundColor: #fff, $lineColor: #000)
+  width: 100%
+  text-align: center
+  border-bottom: 1px solid $lineColor
+  line-height: 0.1em
+  margin: 1em 0 1em
+  span
+    background: $backgroundColor
+    padding: 0 10px

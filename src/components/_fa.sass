@@ -1,0 +1,13 @@
+$fa-font-path: "~font-awesome/fonts"
+@import "~font-awesome/scss/font-awesome"
+@import "~font-mfizz/dist/font-mfizz.css"
+
+@mixin fa-base()
+  @extend .fa
+  @extend .fa-fw
+
+@mixin fa-icon($name, $extras:[])
+  @extend .fa
+  @extend ".fa-#{$name}"
+  @each $extra in $extras
+    @extend ".fa-#{$extra}"

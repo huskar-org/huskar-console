@@ -1,0 +1,28 @@
+{
+  "parser": "babel-eslint",
+  "extends": "airbnb",
+  "rules": {
+    "no-bitwise": "off",
+    "object-curly-newline": ["error", {
+      "consistent": true
+    }],
+    "react/destructuring-assignment": "off",
+    "react/jsx-one-expression-per-line": "off",
+    "jsx-a11y/label-has-for": "off"
+  },
+  "env": {
+    "browser": true,
+    "jest": true
+  },
+  "plugins": [
+    "babel"
+  ],
+  "settings": {
+    "import/extensions": [".js", ".jsx"],
+    "import/resolver": {
+      "webpack": {
+        "config": "webpack.config.babel.js"
+      }
+    }
+  }
+}

@@ -1,0 +1,66 @@
+@import '../components/common'
+@import '../components/fa'
+
+html, body, #root, .view-root
+  height: 100%
+
+body
+  margin: 0
+  font-family: "Lato", "Helvetica Neue", Arial, Helvetica, sans-serif
+  background: #f7f7f7
+
+a
+  color: inherit
+  text-decoration: none
+
+*:focus
+  outline: 0
+
+.view-root
+  $width: 25em
+  $height: 10em
+  $font-size: 2em
+
+  &__indicator
+    background: #F6F8FA
+    border: 1px solid #D5D8DA
+    width: $width
+    height: $height
+    margin-left: -$width / 2
+    margin-top: -$height / 2
+    position: absolute
+    top: 50%
+    left: 50%
+    z-index: $zidx-popup-root-indicator
+    overflow: hidden
+    &--loading
+      color: #5e5e5e
+    &--error
+      cursor: pointer
+      border-color: #AF454A
+      color: #AF454A
+      width: unset
+      padding-right: (($height - $font-size) / 4)
+
+  &__indicator-icon
+    @mixin indicator-icon-decorator()
+      font-size: $font-size
+      margin: (($height - $font-size) / 4) 1em
+      margin-right: 0.5em
+
+    @include fa-icon(info-circle)
+    @include indicator-icon-decorator()
+
+    &--loading
+      @include fa-icon(circle-o-notch, [spin])
+      @include indicator-icon-decorator()
+
+    &--error
+      @include fa-icon(chain-broken)
+      @include indicator-icon-decorator()
+
+  &__indicator-text
+    font-size: $font-size
+    margin: (($height - $font-size) / 4) 0
+    &--loading::after
+      content: "…"

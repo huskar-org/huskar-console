@@ -1,0 +1,33 @@
+@import './common'
+
+\:local(.container)
+  position: relative
+  > input
+    background: #fff
+
+\:local(.inputFocused)
+  outline: none
+
+\:local(.suggestionsContainer)
+  display: none
+
+\:local(.suggestionsContainerOpen)
+  display: block
+  position: absolute
+  border: 1px solid #97FFFF
+  background: #fff
+  max-height: 20em
+  overflow-y: scroll
+  z-index: $zidx-dropdown-autocomplete
+
+\:local(.suggestionsList)
+  margin: 0
+  padding: 0
+  list-style: none
+
+\:local(.suggestion)
+  cursor: pointer
+  padding: 0.3em 2em
+
+\:local(.suggestionHighlighted)
+  background: #D3D3D3

@@ -1,0 +1,22 @@
+@import "./mixin"
+
+.route-status
+  white-space: nowrap
+  user-select: none
+
+  @include inline-label
+  margin-right: 0.5em
+  color: white
+
+  &--disabled
+    background-color: #474747
+    border: 1px solid #474747
+  &--checking
+    background-color: #1488C6
+    border: 1px solid #1488C6
+  &--enabled
+    background-color: #3EBA59
+    border: 1px solid #3EBA59
+  &--standalone
+    background-color: #FEDF41
+    border: 1px solid #FEDF41

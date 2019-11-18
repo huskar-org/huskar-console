@@ -1,0 +1,37 @@
+\:local(.editor)
+  position: relative
+
+  .form-table
+    margin: 0 auto
+    td
+      padding: .5em
+      &:first-child
+        text-align: right
+
+  select
+    width: 150px
+
+  .buttons
+    text-align: right
+
+  .dangerous-button
+    color: #fd878d
+    text-decoration: underline
+    &:hover
+      color: red
+      text-decoration: none
+    &.disabled:hover
+      color: #fd878d
+      text-decoration: underline
+      cursor: not-allowed
+
+  .cluster-preview
+    td:first-child
+      text-align: center
+
+  .cluster-warning
+    p
+      text-align: left
+      width: 300px
+    code.cluster-name
+      font-weight: bold

@@ -1,0 +1,1 @@
+export InfraConfig from './config';

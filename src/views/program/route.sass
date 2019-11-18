@@ -1,0 +1,115 @@
+@import '../../components/fa'
+
+.route-program
+  width: 100%
+  padding: 0 1em
+  overflow-y: scroll
+
+  &__headline
+    overflow: hidden
+    line-height: 1.5em
+    h1
+      font-size: 1.5em
+      margin: 0.5em 0
+      float: left
+    &-buttons
+      margin: 0.5em 0
+      margin-left: 0.5em
+      float: left
+    &-management
+      font-size: 12px
+      margin: 0.5em 0
+      float: right
+      &-button
+        margin: 0 0.5em
+      &-select
+        margin: 0 0.5em
+    &-intro-group
+      clear: both
+      font-size: 12px
+      margin-bottom: 1em
+    &-intro
+      display: inline
+      margin-right: 1.5em
+      &-section
+        font-weight: bold
+        margin-right: 0.5em
+      &-section::after
+        content: ":"
+      &-link
+        font-weight: bold
+        margin: 0 0.25em
+        color: #1681FB
+    &-icon
+      display: inline-block
+      width: 1em
+      height: 1em
+      margin-right: 0.15em
+      &-email
+        @include fa-icon(inbox)
+
+  &__content
+    &--error
+      color: red
+
+  &__status
+    padding: 0.25em 0.5em
+    margin-right: 0.5em
+    border-radius: 0.25em
+    user-select: none
+    color: white
+
+    &--disabled
+      background-color: #474747
+    &--checking
+      background-color: #1488C6
+    &--enabled
+      background-color: #3EBA59
+    &--standalone
+      background-color: #FEDF41
+
+  &__filter-list
+    font-size: 12px
+    margin-bottom: 1em
+
+  &__filter-item
+    display: inline-block
+    margin-right: 1em
+    padding: 0 0.5em
+    background-color: #C9E1FE
+    border: 1px solid #1681FB
+    color: #1681FB
+
+  &__filter-key
+    display: inline-block
+    margin-right: 0.25em
+
+  &__filter-key::after
+    content: ":"
+
+  &__filter-value
+    display: inline-block
+    padding-right: 0.5em
+    margin-right: 0.5em
+    border-right: 1px solid #1681FB
+
+  &__checkbox-count
+    display: inline
+    margin-right: 0.5em
+    width: 8em
+
+  &__status-item
+    line-height: 2em
+    padding-bottom: 0.5em
+    &-section
+      margin-right: 0.5em
+
+  &__action-item
+    padding-bottom: 0.5em
+
+  &__application-icon
+    margin-left: 0.5em
+    @include fa-icon(chevron-circle-right)
+
+  &__load
+    width: 100%

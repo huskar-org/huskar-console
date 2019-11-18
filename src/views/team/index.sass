@@ -1,0 +1,30 @@
+.view-team
+  height: 100%
+  flex-direction: column
+  display: flex
+
+  &__tree
+    flex: 1
+    display: flex
+
+  &__container
+    flex: 1
+    display: flex
+    overflow: auto
+    flex-direction: column
+
+  &__filter
+    margin: 1em
+    > div
+      display: inline-block
+
+  &__buttons
+    float: right
+
+  &__content
+    flex: 1
+    margin: 1em
+    margin-top: 0
+    overflow: auto
+    td:last-child
+      white-space: nowrap

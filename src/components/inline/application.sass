@@ -1,0 +1,89 @@
+@import "../common"
+@import "../fa"
+@import "./mixin"
+
+.inline-application
+  cursor: default
+  display: inline-block
+  white-space: nowrap
+
+  &__badge
+    margin-right: 0.25em
+
+  &__badge-icon
+    @include fa-icon(cubes)
+
+  &__name
+    @include inline-label
+    background: white
+    user-select: all
+    border: 1px solid #E4E4E4
+
+  @mixin _triangle($size, $color)
+    content: " "
+    border-top: ($size + 1px) solid transparent
+    border-bottom: $size solid transparent
+    border-left: $size solid $color
+    position: absolute
+
+  &__name--with-children
+    border-top-right-radius: 0
+    border-bottom-right-radius: 0
+    border-right: 0
+    position: relative // triangle position
+
+    &::before
+      @include _triangle(10px, white)
+      top: 0
+      right: -10px
+      z-index: $zidx-inline-application-triangle-up
+
+    &::after
+      @include _triangle(11px, #E4E4E4)
+      top: -1px
+      right: -11px
+      z-index: $zidx-inline-application-triangle-bottom
+
+    margin-right: 10px
+
+  &__children
+    margin-left: 2px
+    .inline-cluster__ezone, .inline-cluster__default, .inline-cluster__name--without-ezone
+      border-top-left-radius: 0
+      border-bottom-left-radius: 0
+      position: relative // triangle position
+
+      &::before
+        @include _triangle(10px, #F7F7F7)  // background color
+        top: 0
+        left: -10px
+        z-index: $zidx-inline-application-triangle-children-up
+        display: inline-block
+        width: 0
+
+      &::after
+        content: " "
+        width: 10px
+        height: 100%
+        border: 1px solid transparent
+        border-left: 0
+        border-right: 0
+        position: absolute
+        top: -1px
+        left: -10px
+        z-index: $zidx-inline-application-triangle-children-bottom
+
+    .inline-cluster__ezone::before
+      background: #1269D3
+    .inline-cluster__ezone::after
+      border-color: #1269D3
+
+    .inline-cluster__default::before
+      background: #36BC54
+    .inline-cluster__default::after
+      border-color: #36BC54
+
+    .inline-cluster__name--without-ezone::before
+      background: white
+    .inline-cluster__name--without-ezone::after
+      border-color: #E4E4E4

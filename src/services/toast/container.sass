@@ -1,0 +1,22 @@
+@import '../../components/common'
+
+\:local(.container)
+  div
+    position: fixed
+    color: white
+    font-size: 18px
+    background: black
+    padding: 1em
+    border-radius: 0.5em
+    box-shadow: 0px 0px 20px #acacac
+    left: 50%
+    top: 50%
+    margin-top: 0
+    transform: translate(-50%, -120%)
+    pointer-events: none
+    z-index: $zidx-popup-toast
+
+  @keyframes simpletoast
+    to
+      margin-top: -2em
+      opacity: 0

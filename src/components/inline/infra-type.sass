@@ -1,0 +1,33 @@
+.inline-infra-type
+  display: inline-block
+  line-height: 1em
+  white-space: nowrap
+  font-size: 12px
+  &__icon
+    display: inline-block
+    font-size: 2em
+    width: 1em
+    height: 1em
+    // fix the minimal offset of third party icon font
+    position: relative
+    top: 0.25em
+    &.icon-mysql, &.icon-mysql-alt
+      color: #146387
+    &.icon-postgres
+      color: #37688C
+    &.icon-redis
+      color: #D52F31
+    &.icon-database
+      color: #37688C
+      left: 0.2em
+    &.icon-database-alt
+      color: #082C81
+      left: 0.2em
+    &.icon-database-alt2
+      color: #39BAAF
+      left: 0.1em
+    &.icon-aws
+      color: #F3A63C
+  &__label
+    display: inline-block
+    margin-left: 0.5em

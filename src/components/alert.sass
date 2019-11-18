@@ -1,0 +1,64 @@
+.alert
+  margin: 1em
+  margin-top: 0
+  &-content
+    color: #fff
+    padding: 5px 5px
+    font-size: 14px
+    text-align: left
+    a
+      color: #20A0FF
+      border-bottom: 1px solid #20A0FF
+    &__warning
+      background-color: #f7ba2a
+    &__error
+      background-color: #ff4949
+    &__success
+      background-color: #13ce66
+    &__info
+      background-color: #4276ad
+    &-icon
+      width: 16px
+      color: #fff
+    &__description
+      padding: 0 10px
+    &__close
+      float: right
+      vertical-align: middle
+      background: none
+      border: none
+      display: inline
+      font: inherit
+      margin: 0
+      outline: none
+      outline-offset: 0
+      display: inline-block
+      padding: 0 1em
+      padding-bottom: 5px
+      color: inherit
+      text-decoration: none
+      transition: background 200ms ease
+      border-bottom: 2px solid transparent
+      margin-bottom: -1px
+      cursor: pointer
+
+  &-fade
+    &-enter
+      opacity: 0.01
+      transition: opacity .5s ease-in
+      &-active
+        opacity: 1
+        transition: opacity 300ms ease-in
+    &-leave
+      opacity: 1
+      transition: opacity 1s ease-in
+      &-active
+        opacity: 0.01
+        transition: opacity 300ms ease-in
+    &-appear
+      opacity: 0.01
+      transition: opacity 1s ease-in
+
+
+
+

@@ -1,0 +1,180 @@
+@import '../../components/fa'
+
+.view-audit
+  flex: 1
+  display: flex
+  overflow: auto
+  flex-direction: column
+
+  &__beacon-icon
+    color: #474747
+    font-size: 1.5em
+    @include fa-base
+    position: relative
+    top: 3px
+    left: 0
+    &--docker
+      color: #1488C6
+
+  &__filter
+    margin: 1em
+    > div
+      display: inline-block
+    > .pull-right
+      float: right
+      button
+        margin-left: 0.5em
+      .page-index
+        font-size: 0.8em
+        margin-right: 0.5em
+
+  &__select
+    margin-left: 0.25em
+
+  &__cancel
+    padding: 0 0.5em 0.5em
+    vertical-align: top
+    &--done
+      color: #856404
+      background-color: #fff3cd
+      padding: 0.5em
+
+  &__content
+    flex: 1
+    margin: 1em
+    margin-top: 0
+    overflow: auto
+    tr.info td
+      text-align: center
+      padding: 5em 0
+    tr.info.error td
+      color: #B22222
+
+    .action
+      line-height: 2.2em
+      code
+        font-weight: bold
+      .unknown-action
+        font-style: italic
+        color: #999
+      .detail
+        margin-top: 1em
+        padding-top: 0.5em
+        border-top: 1px #ccc dashed
+
+        .detail-creation, .detail-deletion, .detail-information
+          display: block
+          vertical-align: middle
+          width: 50.5em
+          padding: 0.25em 0.5em
+          white-space: nowrap
+          overflow: hidden
+          font-weight: normal
+          text-overflow: ellipsis
+        .detail-deletion
+          background-color: #ffecec
+          &:before
+            content: "-"
+            margin-right: 1em
+            color: #C92736
+        .detail-creation
+          background-color: #ebffeb
+          &:before
+            content: "+"
+            margin-right: 1em
+            color: #36BC54
+        .detail-information
+          background-color: #f1f8ff
+          &:before
+            content: "?"
+            margin-right: 1em
+            color: #C9E1FE
+          .path
+            color: #1269D3
+          .comma
+            color: transparent
+          .value
+            margin-left: 0.5em
+
+    .remote
+      white-space: nowrap
+
+    .ip
+      user-select: none;
+      color: #999;
+
+    .wrapped-value
+      display: block
+      vertical-align: middle
+      width: 30.5em
+      padding: 0.25em 0.5em
+      white-space: nowrap
+      overflow: hidden
+      font-weight: normal
+      text-overflow: ellipsis
+    .desensitized-value
+      padding: 0.25em 0.5em
+      border-radius: 0.25em
+      border: 1px solid #BC8D36
+      border-right: 0
+      color: white
+      background: #BC8D36
+  .audit-timeline-navigation
+    &__title
+      font-size: 12px
+      font-weight: normal
+      line-height: 2em
+      margin: 0 1em 0 0
+      padding: 0
+      float: left
+
+    &__btnlink
+      border-radius: 0.25em
+      padding: 0.25em 0.5em
+      background: white
+      border: 1px solid #E4E4E4
+    &__breadcrumb::after
+      content: "/"
+      opacity: 0.5
+      margin-left: 0.5em
+      margin-right: 0.5em
+  &__rollback
+    cursor: pointer
+
+.audit-search
+  &__prepend
+    float: left
+    select
+      border-top-right-radius: 0
+      border-bottom-right-radius: 0
+      border: 1px solid #ccc
+      background: #fbfdff
+      border-right: none
+      height: 24px
+  &__input
+    display: inline-block
+    position: relative
+    &-text
+      width: 200px
+      height: 24px
+      padding-right: 20px !important
+    &--icon
+      @include fa-icon(search, [fw])
+      position: absolute
+      right: 1px
+      top: 3px
+      color: #a2a2a2
+      font-size: 1em
+      cursor: pointer
+  &__exclude
+    margin: 0
+    margin-top: 5px
+    &-explain
+      font-size: 12px
+      margin-left: 3px
+      padding-right: 20px
+
+// Corver the origin style for adaptation
+.Select-control
+  & > *:last-child
+    padding-right: 20px !important

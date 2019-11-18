@@ -1,0 +1,52 @@
+@mixin button()
+  white-space: nowrap
+  box-sizing: border-box
+  border: 0
+  border-radius: 5px
+  height: 2em
+  line-height: 2em
+  padding: 0 .75em
+  background: #5bbd72
+  color: #fff
+  cursor: pointer
+  &:hover
+    opacity: 0.8
+  &:disabled
+    opacity: 0.5
+    cursor: not-allowed
+
+.btn
+  @include button()
+
+.btn--default
+  background-color: gray
+
+.btn--primary
+  background-color: #5bbd72
+
+.btn--danger
+  background-color: #ff5154
+
+.btn--delay
+  position: relative
+  display: inline-block
+  overflow: hidden
+
+  &__content
+    position: relative
+    display: block
+
+  &__progress
+    position: absolute
+    top: 0
+    left: 0
+    height: 100%
+
+  &__progress--default
+    background-color: #333
+
+  &__progress--primary
+    background-color: #006d19
+
+  &__progress--danger
+    background-color: #8c000d

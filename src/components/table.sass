@@ -1,0 +1,40 @@
+@import './common'
+@import './fa'
+
+.table
+  position: relative
+
+  &__table
+    border-collapse: collapse
+    width: 100%
+    font-size: 12px
+    thead td
+      background: #f0f0f0
+    tr
+      transition: background 200ms ease
+      &:hover
+        background: #f0f0f0
+    td
+      padding: 1em
+      border: solid #e1e6eb
+      border-width: 1px 0
+      text-align: left
+    td:last-child
+      text-align: right
+
+  &__loading
+    @include modal
+    &-inner
+      @include modal-inner
+    &-icon
+      @include fa-icon(spinner, [spin, 3x, fw])
+
+  &__collapsed
+    font-size: 12px
+    height: 3em
+    line-height: 3em
+    border: 1px dashed #ccc
+    &-a
+      display: block
+      color: #5e5e5e
+      text-align: center

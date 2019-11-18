@@ -1,0 +1,20 @@
+\:local(.keyvalue)
+  margin: 0
+  display-inline: block
+  padding: 0
+  list-style: none
+  li
+    flex: 1
+    float: left
+    clear: left
+    margin-bottom: .5em
+    > *
+      margin-right: .5em
+    &:nth-last-child(1), &:nth-last-child(2)
+      margin-bottom: 0
+    &:last-child
+      clear: none
+  [placeholder="Key"]
+    width: 5em
+  [placeholder="Value"]
+    width: 10em

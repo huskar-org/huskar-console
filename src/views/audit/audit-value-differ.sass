@@ -1,0 +1,54 @@
+.view-audit__content-differ
+  display: flex
+  align-items: center
+
+  .view-audit__content
+    margin: 0
+
+    .action--diff
+      max-height: 90vh
+      overflow: scroll
+
+      .detail
+        border: none
+        margin: 2em
+
+        .detail-deletion, .detail-creation, .value, .audit-timeline__value
+          user-select: all
+          overflow-wrap: break-word
+          word-break: break-all
+          text-overflow: unset
+          overflow-x: scroll
+          white-space: pre-line
+          min-width: 50.5em
+          width: unset
+
+        .audit-timeline__value
+          background-color: #ebffeb
+          font-weight: normal
+          padding: 1em
+          display: inline-block
+
+        .git-diff
+          min-width: 50.5em
+
+          .d2h-file-header
+            display: none
+
+          .d2h-diff-table
+            overflow-wrap: break-word
+            word-break: break-all
+
+      .wrapped-value
+        width: unset
+
+  &__toggle
+    text-align: right
+    margin: 0 2em 2em
+    cursor: pointer
+    color: #1C6BD0
+    text-decoration-line: underline
+
+.popuped
+  .view-audit__content-differ
+    max-width: 80vw

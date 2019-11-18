@@ -1,0 +1,44 @@
+@import './fa'
+
+.tags
+  &__container
+    position: relative
+  &__items
+    margin: 0
+    padding: 0
+    overflow: auto
+    list-style: none
+    display: inline
+  &__item
+    float: left
+    cursor: pointer
+    margin: 0.1em
+  &__tag
+    color: #797979
+    padding: 0.1em 0.6em
+    border: 1px solid #d9d9d9
+    border-radius: 0.6em
+    background: #fafafa
+    margin-right: 0.3em
+    &:hover
+      background: #409EFF
+      color: #fff
+    &--active
+      background: #409EFF
+      color: #fff
+    &-box
+      font-size: 14px
+      display: inline-block
+      margin-bottom: 0.15em
+    &--editable
+      @include fa-icon(times)
+      font-size: 0.1em
+      position: relative
+      vertical-align: top
+      margin-left: 0.3em
+      cursor: pointer
+
+  &__input
+    display: inline-block
+    vertical-align: top
+    margin: 0.1em

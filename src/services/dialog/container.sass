@@ -1,0 +1,46 @@
+@import '../../components/common'
+
+\:local(.container)
+  transition: all 200ms ease
+  opacity: 0
+  visibility: hidden
+  position: fixed
+  left: 0
+  right: 0
+  top: 0
+  bottom: 0
+  background: rgba(0, 0, 0, .8)
+  text-align: center
+  z-index: $zidx-popup-dialog
+  > div
+    display: inline-block
+    border-radius: 5px
+    text-align: left
+    margin-top: 50vh
+    background: #f7f7f7
+    opacity: 0
+    visibility: hidden
+    transform: translateY(-50%) scale(0.6)
+    transition: all 200ms ease
+    font-size: 12px
+    > div
+      min-width: 200px
+      min-height: 100px
+    > dl
+      margin: 0
+      $padding: 0.8em 1.6em
+      > dt
+        padding: $padding
+        font-weight: bold
+        border-bottom: 1px solid rgba(39, 41, 43, 0.15)
+      > dd
+        margin: 0
+        padding: $padding
+        background: #fff
+  &.popuped
+    opacity: 1
+    visibility: visible
+    > div
+      opacity: 1
+      transform: translateY(-60%) scale(1)
+      visibility: visible

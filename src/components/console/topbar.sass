@@ -1,0 +1,64 @@
+@import "../fa"
+
+.topbar
+  margin: 0 1em
+  display: flex
+  border-bottom: 1px solid #e4e4e4
+  $height: 36px
+  line-height: $height
+  min-height: $height + 1px
+  a
+    height: $height
+
+  &__items
+    white-space: nowrap
+    flex: 1
+    margin: 0
+    padding: 0
+    top: 36px
+    list-style: none
+    font-size: 14px
+    font-weight: bold
+    color: #1b1c1d
+    li
+      display: inline-block
+    a
+      display: inline-block
+      padding: 0 1em
+      color: inherit
+      text-decoration: none
+      transition: background 200ms ease
+      border-bottom: 2px solid transparent
+      margin-bottom: -1px
+      cursor: pointer
+      &.active
+        color: #4fac65
+        border-bottom-color: #4fac65
+
+  &__buttons
+    text-align: right
+    button
+      margin-right: 0.3em
+
+  &__token-dialog
+    padding: 1.5em
+    width: 300px
+    font-size: 14px
+    a
+      font-weight: bold
+      text-decoration: underline
+      color: black
+    code
+      font-weight: bold
+      font-family: monospace
+      color: black
+      &.token
+        font-weight: normal
+        color: #666
+        word-break: break-all
+  &__icon
+    display: inline-block
+    &--lock
+      @include fa-icon(lock)
+    &--unlock
+      @include fa-icon(unlock)

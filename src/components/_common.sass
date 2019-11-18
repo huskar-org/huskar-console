@@ -1,0 +1,34 @@
+$zidx-inline-application-triangle-children-bottom: 0
+$zidx-inline-application-triangle-children-up: 1
+$zidx-inline-application-triangle-bottom: 2
+$zidx-inline-application-triangle-up: 3
+$zidx-dropdown-autocomplete: 4
+$zidx-dropdown-servicelevel: 10
+$zidx-dropdown-datepicker: 99
+$zidx-dropdown-react-datetime: 100
+$zidx-popup-modal: 101
+$zidx-popup-dialog: 102
+$zidx-popup-root-indicator: 103
+$zidx-popup-toast: 200
+
+@mixin modal
+  position: absolute
+  top: 0
+  left: 0
+  margin: 0
+  padding: 0
+  width: 100%
+  height: 100%
+  background-color: rgba(247, 247, 247, 0.7)
+  z-index: $zidx-popup-modal
+
+@mixin modal-outer
+  position: relative
+
+@mixin modal-inner
+  position: sticky
+  top: 30%
+  margin: 0
+  padding: 0
+  width: 100%
+  text-align: center

@@ -1,0 +1,28 @@
+@import "../../fa"
+@import "../../button"
+
+.amqp-dashboard
+  padding: 5em
+  text-align: center
+  line-height: 3em
+
+  &--loading
+    line-height: 1em
+
+  &__indicator
+    margin-top: 2em
+    &-icon
+      @include fa-icon(spinner, [spin, 3x, fw])
+    &-text
+      display: block
+      margin-top: 1em
+
+  &__button
+    @include button()
+    padding: 0.5em
+
+    &--default
+      background-color: gray
+
+  &__invalid
+    color: red

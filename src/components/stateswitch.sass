@@ -1,0 +1,37 @@
+.stateswitch
+  display: inline-block
+  border: 1px solid #ccc
+  border-radius: .25em
+  box-sizing: border-box
+  width: 80px
+  height: 24px
+  line-height: 24px
+  padding: 0
+  position: relative
+  box-shadow: inset 0 0 3px #ccc
+  cursor: pointer
+  background: none
+  &:disabled
+    cursor: not-allowed
+  &-state-on
+    background: #5bbd72
+    left: 30px
+  &-state-off
+    background: gray
+    left: 0
+  span
+    top: 0
+    bottom: 0
+    height: auto
+    margin: -1px
+    padding: 0
+    position: absolute
+    border-radius: .25em
+    border: 0
+    color: #fff
+    text-align: center
+    width: 50px
+    box-shadow: 0 0 10px #ccc
+    transition: left 200ms ease, background 200ms ease
+    &:before
+      content: attr(data-value)

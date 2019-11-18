@@ -1,0 +1,37 @@
+\:local(.info)
+  position: relative
+
+  ul
+    padding: 0
+    list-style: none
+  td
+    padding: .5em
+    &:first-child
+      text-align: right
+
+  .input-wrapper
+    input, textarea
+      box-sizing: border-box
+      width: 300px
+      border: 1px solid #ccc
+      border-radius: 5px
+      padding: .5em
+      &:invalid
+        color: red
+
+  .loading
+    position: absolute
+    left: 0
+    top: 0
+    height: 100%
+    width: 100%
+    background: rgba(0, 0, 0, 0.5)
+
+  .buttons
+    text-align: right
+    padding-right: 0.7em
+
+  .textarea
+    width: 100%
+    max-width: 100%
+    min-height: 15em

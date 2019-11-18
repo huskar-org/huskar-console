@@ -1,0 +1,94 @@
+@import "../../../components/common"
+@import "../../../components/fa"
+
+.service
+  &__top
+    flex: 1
+    display: flex
+    overflow: auto
+    flex-direction: column
+
+  &__breadcrumb
+    font-size: 12px
+    margin-right: 1em
+
+  &__filter
+    margin: 1em
+    > div
+      display: inline-block
+    input
+      margin-right: 0.3em
+
+  &__indicators
+    line-height: 2em
+    font-size: 12px
+    &__label
+      margin-left: 0.5em
+      margin-right: 1em
+    &__value
+      margin-left: -0.5em
+    &__ezone
+      margin-right: 0.25em
+    &__link
+      text-decoration: underline
+      color: #236ECD
+    &__link:hover
+      text-decoration: none
+    &__separator::after
+      content: "|"
+      color: #999
+      margin-left: 0.25em
+      margin-right: 0.25em
+
+  &__buttons
+    float: right
+    button
+      margin-left: 0.3em
+    button:first
+      margin-left: 0
+
+    &__collapse
+      float: right
+      margin-top: 2px
+
+  &__content
+    flex: 1
+    margin: 1em
+    margin-top: 0
+    overflow-y: scroll
+
+  &__modal
+    @include modal
+    &-outer
+      @include modal-outer
+    &-inner
+      @include modal-inner
+    &-icon
+      &--loading
+        @include fa-icon(spinner, [spin, 3x, fw])
+
+  &__cluster
+    margin-bottom: 1.5em
+    &--empty
+      margin-bottom: 0
+    &--link
+      margin-bottom: 0
+
+      .service-instance-table
+        margin-bottom: 0.2em
+        &__headline
+          margin-bottom: 0.2em
+
+  &__below
+    font-size: 12px
+    margin-bottom: 1.5em
+    border-top: 1px solid #E1E6EB
+    border-bottom: 1px solid #E1E6EB
+    text-align: center !important  // Give up
+    color: #999
+    padding: 1em 0
+    background: #f0f0f0
+
+  &__alertLink
+    color: #20A0FF
+    border-bottom: 1px solid #20A0FF

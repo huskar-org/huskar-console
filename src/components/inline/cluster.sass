@@ -1,0 +1,40 @@
+@import "./mixin"
+
+.inline-cluster
+  cursor: default
+  white-space: nowrap
+
+  &__ezone
+    @include inline-label
+    border-top-right-radius: 0
+    border-bottom-right-radius: 0
+
+    border: 1px solid #1269D3
+    border-right: 0
+    color: white
+    background: #1269D3
+    user-select: none
+
+  &__name
+    @include inline-label
+    &--with-ezone
+      border-top-left-radius: 0
+      border-bottom-left-radius: 0
+
+    border: 1px solid #E4E4E4
+    &--with-ezone
+      border-left: 0
+    background: white
+    user-select: all
+
+  &__default
+    @include inline-label
+    border: 1px solid #36BC54
+    color: white
+    background: #36BC54
+    user-select: none
+
+  &__number
+    user-select: none;
+    margin-left: 2px;
+    color: #999;

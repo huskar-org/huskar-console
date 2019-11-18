@@ -1,0 +1,105 @@
+@import "../../../components/fa"
+
+.service-instance-table
+  font-size: 12px
+  margin-bottom: 1em
+
+  &__headline
+    line-height: 2em
+    margin-bottom: 0.5em
+    position: relative
+    &-button
+      position: absolute
+      right: 0
+      bottom: 0
+
+  &__beacon-link
+    margin-right: 0.3em
+    vertical-align: middle
+
+  &__beacon-icon
+    color: #474747
+    font-size: 1.5em
+    @include fa-base
+    position: relative
+    top: 3px
+    left: 0
+    &--ghost
+      color: #6B5AB9
+    &--redhat
+      color: #C9232C
+    &--docker
+      color: #1488C6
+    &--disabled
+      color: #999
+
+  &__item
+    white-space: nowrap
+
+  &__item-key
+    user-select: all
+
+  &__item-ip, &__item-port
+    font-family: monospace
+    user-select: all
+
+  &__item-ip-idc
+    user-select: none
+    color: #999
+
+  &__item-action
+    button
+      margin-left: 0.3em
+    button:first
+      margin-left: 0
+
+  &__key
+    &--redhat
+      color: blue
+    &--docker
+      max-width: 30em
+      overflow: hidden
+      text-overflow: ellipsis
+      &::before, &::after
+        content: "…"
+
+  &__table--linked
+    thead
+      opacity: 0.5
+
+  &__thead
+    &-ip
+      width: 10em
+    &-port
+      width: 5em
+    &-proto
+      width: 5em
+    &-state
+      width: 8em
+    &-created, &-updated
+      width: 9em
+    &-actions
+      width: 10em
+
+  &__tbody--linked
+    tr:first-child
+      text-decoration-line: none
+      opacity: 1
+
+    tr ~ tr
+      text-decoration-line: line-through
+      opacity: 0.5
+
+    a
+      text-decoration: underline
+      color: #236ECD
+
+  &__link_tip
+    td
+      color: #856404
+      background-color: #fff3cd
+      text-decoration-line: none
+      text-align: center
+
+    td:last-child
+      text-align: center

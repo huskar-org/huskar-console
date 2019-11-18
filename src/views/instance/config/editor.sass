@@ -1,0 +1,62 @@
+@import '../../../components/console/editor'
+
+.config-editor
+  &__table
+    table-layout: fixed
+
+  &__label
+    @include editor-table-label()
+
+  &__field
+    @include editor-table-field($width: 35em)
+
+    .textfield
+      display: block
+
+  &__field-line-error
+    @include editor-table-field-line-error()
+
+  &__btn-link-line
+    @include editor-table-field-line()
+    overflow: auto
+    &--right
+      float: right
+    &--left
+      float: left
+
+  &__btn-link
+    &:before
+      content: "/"
+      margin: 0 0.5em
+      pointer-events: none
+    &:first-of-type:before
+      content: ""
+      margin: 0
+
+  &__btn-group
+    @include editor-table-btn-group()
+
+  &__input
+    width: 100%
+
+  &__textarea
+    width: 100%
+    max-width: 100%
+    min-height: 15em
+
+  &__ace
+    width: 100%
+    max-width: 100%
+    min-height: 15em
+    border: 1px solid #ccc
+
+  &__checkbox
+    margin-right: 0.5em
+
+  &__tip
+    color: #ff4040
+
+    a
+      text-decoration: underline
+      &:hover
+        text-decoration: none

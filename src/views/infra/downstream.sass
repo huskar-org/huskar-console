@@ -1,0 +1,71 @@
+@import '../../components/fa'
+@import "../../components/button"
+
+.infra-downstream
+  flex: 1
+  display: flex
+  overflow: auto
+  flex-direction: column
+  margin: 0 1em
+
+  &__topbar
+    margin-top: 1em
+
+  &__topbar-left
+    font-size: 12px
+    line-height: 2em
+    float: left
+
+  &__topbar-right
+    float: right
+
+  &__body
+    flex: 1
+    margin-top: 1em
+
+  &__icon-invalidate
+    @include fa-icon(eraser)
+    margin-right: 0.25em
+
+  &__icon-refresh
+    @include fa-icon(refresh)
+    margin-right: 0.25em
+
+  &__icon-anchor
+    @include fa-icon(anchor)
+    margin-left: 0.25em
+
+  &__anchor
+    & .infra-downstream__icon-anchor
+      visibility: hidden
+    &:hover .infra-downstream__icon-anchor
+      visibility: visible
+
+  &__code-name, &__field-name
+    display: inline-block
+    padding: 0.25em 0.5em
+    border-radius: 0.5em
+
+  &__code-name
+    background: white
+    color: black
+    border: 1px solid #E4E4E4
+    user-select: all
+
+  &__field-name
+    background: #FCF3D5
+    color: #7E6734
+    border: 1px solid #D7BD84
+    user-select: none
+    margin-left: 0.5em
+
+  &__button-link
+    display: inline-block
+    margin-left: 0.25em
+    @include button()
+
+  &__button
+    margin-left: 0.25em
+
+  &__operation
+    white-space: nowrap

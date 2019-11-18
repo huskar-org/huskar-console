@@ -1,0 +1,26 @@
+@import '../../../components/console/editor'
+
+.switch-editor
+  &__table
+    table-layout: fixed
+
+  &__warning
+    @include editor-table-warning()
+
+  &__label
+    @include editor-table-label()
+
+  &__field
+    @include editor-table-field()
+
+  &__field-line-error
+    @include editor-table-field-line-error()
+
+  &__btn-group
+    @include editor-table-btn-group()
+
+  &__input
+    width: 100%
+
+  &__checkbox
+    margin-right: 0.5em

@@ -1,0 +1,21 @@
+.config-error-hint
+  display: block
+  margin-bottom: 1em
+  overflow-y: hidden
+  transition: max-height 0.5s ease-in-out
+  max-height: 6em
+
+  @mixin line()
+    display: block
+    margin: 0.5em 0
+
+  &--hidden
+    max-height: 0
+
+  &__content
+    @include line()
+    color: orange
+
+  &__suggestion
+    @include line()
+    color: black

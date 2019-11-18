@@ -1,0 +1,101 @@
+@import "../fa"
+@import "../button"
+@import "../inline/mixin"
+
+.infra-config
+  position: relative
+
+  &__arrow
+    display: block
+    position: absolute
+    left: 12em
+    top: -5em
+    &-icon
+      font-size: 5em
+      color: red
+    &-text
+      color: red
+
+    // Unfortunately we can just use :target pseudo class
+    // Ref: https://bugs.webkit.org/show_bug.cgi?id=83490
+    &--hidden
+      display: none
+
+  &__headline
+    overflow: hidden
+    margin: 1.5em 0 1em 0
+    &-title
+      float: left
+      margin: 0
+    &-buttons
+      float: right
+    &-button
+      margin-left: 0.25em
+    &-button-link
+      font-size: 12px
+      margin-left: 0.25em
+      display: inline-block
+      @include button()
+
+
+  &__button
+    margin-left: 0.25em
+    .octicon
+      vertical-align: text-top
+
+  &__button-text
+    margin-left: 0.25em
+
+  &__codename
+    font-weight: bold
+    user-select: all
+
+  &__location
+    line-height: 2em
+
+  &__raw-url
+    @include inline-label
+    background: white
+    border: 1px solid #E4E4E4
+
+  &__raw-url-icon
+    @include fa-icon(cubes)
+    color: #999
+    padding-right: 0.25em
+
+  &__tr
+    &--anchor
+      background: #FEFEE1
+    &--anchor:hover
+      background: #FBFBB8 !important
+
+  &__expand
+    margin-top: 0.5em
+    font-size: 12px
+    height: 3em
+    line-height: 3em
+    border: 1px #ccc dashed
+    text-align: center
+    &-anchor
+      display: block
+      color: #5e5e5e
+
+  &-cell
+    &__button
+      margin-left: 0.5em
+      visibility: hidden
+      cursor: pointer
+      &--pinned
+        visibility: visible
+        color: #61BB77
+        &:hover
+          text-decoration: underline
+
+    &:hover &__button
+      visibility: visible
+
+  &__option-btn-icon
+    @include fa-icon(cog)
+
+  &__dashboard-btn-icon
+    @include fa-icon(dashboard)
