@@ -1,6 +1,13 @@
-# Huskar Front-End
+# Huskar Console
 
 The web console of [Huskar](https://github.com/huskar-org/huskar).
+
+Demo
+------
+
+* 面板: https://demo.huskar.org (用户名: `huskar` 密码: `test`)
+* API: https://api.demo.huskar.org
+* 备注: 每天凌晨三点自动重置数据。
 
 ## Getting Start
 
