@@ -9,7 +9,7 @@ Demo
 * API: https://api.demo.huskar.org
 * 备注: 每天凌晨三点自动重置数据。
 
-## Getting Start
+## Getting Started
 
 You should create a `.env` file (from `.env.example`) for development in local.
 
@@ -31,7 +31,7 @@ $ npm start                      # start the development server
 $ npm test                       # run tests
 ```
 
-## Delopyment
+## Deployment
 
 
 There is a series of configuration items as environment variables:
